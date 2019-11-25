@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="rus">
+ {% include "head.html" %}
+ <body>
+ {% include "navigation.html" %}
+	<main>
+		<div class="mainContainer">
+			<h1>{{ the_name }}: {{ answers_num }} ответов </h1>
+			<img src="{{url_for('static', filename=cloud_name)}}" />
+			<h3>Общие результаты можно посмотреть <a href="/results">здесь</a> </h3>
+		</div>
+	</main>
+</body>
+</html>

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="rus">
+ {% include "head.html" %}
+ <body>
+ {% include "navigation.html" %}
+ <style>
+* {
+  box-sizing: border-box;
+}
+
+#regForm {
+  background-color: #ffffff;
+  margin: 100px auto;
+  font-family: Raleway;
+  padding: 40px;
+  width: 70%;
+  min-width: 300px;
+}
+
+h1 {
+  text-align: center;
+}
+
+input {
+  padding: 10px;
+  width: 100%;
+  font-size: 17px;
+  font-family: Raleway;
+  border: 1px solid #aaaaaa;
+}
+
+/* Mark input boxes that gets an error on validation: */
+input.invalid {
+  background-color: #ffdddd;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+p {
+	font-size: 16px;
+}
+
+</style>
+<main>
+	<div class="mainContainer">
+		<form id="regForm" name="nameQuest" method="post">
+		    <h1>Анкета</h1>
+		  	<h2>О вас</h2>
+		    <div class="form-group">
+		    	<p>Как вас зовут?<input placeholder="My name is..." type="text" name="fname"></p>
+		  	</div>
+			<div class="form-group">
+			    <p>Если хотите, можете оставить ваши контакты<input placeholder="E-mail..." name="email" type="text"></p>
+			    <p><input placeholder="+7..." name="phone" type="text"></p>
+			</div>
+			<h2>О вашем имени</h2>
+			<div class="form-group">
+		    	<p>С каким полом обычно связано ваше имя?</p>
+		    	<input type="radio" name="ngender" value="Female">Женский
+		    	<br>
+		    	<input type="radio" name="ngender" value="Male">Мужской
+		    	<br>
+		    	<input type="radio" name="ngender" value="Other">Оба
+		    	<br>
+		    	<input type="radio" name="ngender" value="Other">Другое
+		  	</div>
+			<div class="form-group">
+		        <p>Какова полная и краткая форма вашего имени (если они совпадают, оставьте поле с краткой формой пустым)?</p>
+		        <input placeholder="Полное..." name="nfull" type="text">
+		        <input placeholder="Краткое..." name="nshort" type="text">
+			</div>
+			<h3>Какие ещё формы своего имени вы знаете?</h3>
+			<div class="form-group">
+		        <p>Уважительная форма (если есть помимо полного имени)</p>
+		        <input name="rname1" type="text">
+		        <p>Предпочитаемая вами форма имени</p>
+		        <input name="favname" type="text">
+			 </div>
+			<div class="form-group">
+		        <p>Уменьшительно-ласкательные формы</p>
+		        <input name="dname1" type="text">
+		        <input name="dname2" type="text">
+		        <input name="dname3" type="text">
+			 </div>
+			<div class="form-group">
+		        <p>Оскорбительные формы</p>
+		        <input name="oname1" type="text">
+		        <input name="oname2" type="text">
+		        <input name="oname3" type="text">
+			 </div>
+			<div class="form-group">
+		        <p>Шутливые формы</p>
+		        <input name="jname1" type="text">
+		        <input name="jname2" type="text">
+		        <input name="jname3" type="text">
+			 </div>
+			 <div>
+			 <p>Устаревшая форма имени</p>
+		        <input name="oldname" type="text">
+			 </div>
+			<p>Комментарии</p>
+		        <input name="opinion" type="text">
+			 </div>
+			<div class="form-group">
+				<input class="button" type="submit" value="Submit">
+			</div>
+		</form>
+	</div>
+</main>
+</body>
+</html>
